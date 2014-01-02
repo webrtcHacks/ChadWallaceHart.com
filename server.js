@@ -25,13 +25,20 @@ var loggedIn = false,
 
 //Temporary home page
 app.get('/', function (req, res) {
+            //loggedIn = true;
     if (loggedIn == true) {
-        res.render('index', { title: "Chad is available to WebRTC" });
-        console.log("homepage -logged in " + loggedIn);
+        //res.render('index', { title: "Chad is available to WebRTC" });
+        res.render('index',
+            { title: 'available', message: "Chad is available to WebRTC" }
+        );
+        console.log("homepage -logged in");
     }
     else {
-        res.render('index', { title: "Chad is NOT available to WebRTC" });
-        console.log("homepage -not logged in " + loggedIn);
+        //res.render('index', { title: "Chad is NOT available to WebRTC", message: "not" });
+        res.render('index',
+            { title: 'not', message: "Chad is NOT available to WebRTC" }
+        );
+        console.log("homepage -not logged in");
     }
 
     //console.log(process.cwd());
@@ -103,8 +110,8 @@ app.post('/logout', function (req, res) {
     }
 })
 
-//Initiate a call
-app.get('/call', function(req, res){
+//Initiate a video call
+app.get('/video', function(req, res){
     if (loggedIn == true) {
         res.sendfile(__dirname + '/easyrtc/demo_multiparty.html');
     }
