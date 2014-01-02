@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Log out of chadwallacehart.com</title>
+    </head>
+    <body>
+        <form action=""> 
+        password: <input type="password" name="pass">
+        <input type="submit" value="Logout">
+            </form>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $("form").submit(function () {
+                    console.log("password sumbitted");
+                    var pw = { "pw": $("input").val() };
+                    $.post("/logout", pw, function (response, status) {
+                        //console.log("PW:" + JSON.stringify(pw.pw) + "\nstatus:" + status);
+                        if (response) {alert("stop!")}
+                        $("body").text(response);
+                        console.log(JSON.stringify(response));
+                    }
+                );
+                });
+            });
+    </script>
+
+
+    </body>
+</html>

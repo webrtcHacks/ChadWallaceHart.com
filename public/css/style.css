@@ -1,0 +1,35 @@
+body {
+    background-color: #000;
+    background-position: left;
+    background-image: url("/img/background.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 640px; 
+    height: 480px;
+}
+h1{
+    text-align: left;
+    font-family: Consolas;
+    font-size: large;
+    font-weight: 400;
+    color: #fff;
+}
+
+footer{
+    position: absolute ;
+    bottom: 0;
+    left: 40%;  
+    color: #efefef;
+    text-align: center;
+    font-size: small;
+}
+img{
+    vertical-align: bottom;
+    height: 18px;
+    resize: vertical;
+    padding-left: 2px;
+}
+table{
+    width:  100%;
+    position: absolute; 
+}
