@@ -120,46 +120,9 @@ app.get('/video', function(req, res){
     }
 });
 
-//var webServer = app.listen(process.env.port || 8080);
-var webServer = app.listen(process.env.port || 8080);
-console.log('Listening on port ' + process.env.port || 8080);
+//var webServer = app.listen(process.env.port || 8080); //original WebMatrix port
+var webServer = app.listen(80);
+console.log('Listening on port ' + 80);
 
 // Start Socket.io so it attaches itself to Express server
 var socketServer = io.listen(webServer);
-
-// Configuration
-/*
-app.configure(function() {
-    app.use(express.static(__dirname + "/public/"));
-});
-
-app.configure('development', function(){
-  app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
-});
-
-app.configure('production', function(){
-  app.use(express.errorHandler());
-});
-
-*/
-//failed kill session attempts
-/*
-//did nothing
-//http://stackoverflow.com/questions/16000120/socket-io-close-server
-var socketlist = [];
-socketServer.sockets.on('connection', function(socket) {
-    socketlist.push(socket);
-    socket.emit('socket_is_connected','You are connected!');
-    socket.on('close', function () {
-      console.log('socket closed');
-      socketlist.splice(socketlist.indexOf(socket), 1);
-    });
-});
-*/
-
-/* //didn't work
-               // shut down the WS server
-               socketServer.close();
-               
-               //kill open sockets
-               socketlist.forEach(function(socket) {socket.destroy()});*/
