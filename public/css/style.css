@@ -1,4 +1,5 @@
 body {
+    /*background*/
     background-color: #000;
     background-position: left;
     background-image: url("/img/background.png");
@@ -6,20 +7,22 @@ body {
     background-size: contain;
     width: 640px; 
     height: 480px;
+    
+    /*defaults*/
+    font-family: Consolas;
 }
 h1{
     text-align: left;
-    font-family: Consolas;
     font-size: large;
     font-weight: 400;
     color: #fff;
 }
 
 footer{
+    color: #e7e7e7;
     position: absolute ;
     bottom: 0;
     left: 40%;  
-    color: #efefef;
     text-align: center;
     font-size: small;
 }
@@ -33,3 +36,24 @@ table{
     width:  100%;
     position: absolute; 
 }
+#buttons{
+    font-size: 60%;
+    color:  #e7e7e7;
+    padding-left: 70px;
+}
+button{
+    padding: 2px;
+    background-color: #bdbdbd;
+    border: #efefef,solid, 2px;
+    color: #000;
+    font-size: small;
+    font-weight: 600;
+}
+button:hover{
+    background: #e7e7e7;
+}
+button:disabled{
+    background-color: Gray;
+    border: 2px, solid, DarkGray;
+}
+
