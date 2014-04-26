@@ -121,7 +121,7 @@ app.get('/video', function(req, res){
 });
 
 //var webServer = app.listen(process.env.port || 8080); //original WebMatrix port
-var webServer = app.listen(80);
+var webServer = app.listen(8080);
 console.log('Listening on port ' + 80);
 
 // Start Socket.io so it attaches itself to Express server

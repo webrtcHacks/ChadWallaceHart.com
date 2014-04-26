@@ -1,0 +1,35 @@
+{
+  "name": "ChadWallaceHart.com",
+  "subdomain": "ChadWallaceHart.com",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "version": "0.0.2-5",
+  "engines": {
+    "node": "0.10.x"
+  },
+  "description": "ChadWallaceHart.com\r ===================",
+  "main": "server.js",
+  "dependencies": {
+    "easyrtc": "~1.0.10",
+    "express": "~3.1.0",
+    "jade": "~1.0.2",
+    "socket.io": "~0.9.16"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/webrtcHacks/ChadWallaceHart.com"
+  },
+  "keywords": [
+    "ChadWallaceHart.com",
+    "WebRTC",
+    "webrtcHacks"
+  ],
+  "author": "Chad Hart",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/webrtcHacks/ChadWallaceHart.com/issues"
+  },
+  "homepage": "https://github.com/webrtcHacks/ChadWallaceHart.com"
+}
