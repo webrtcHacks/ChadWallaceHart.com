@@ -21,7 +21,7 @@ app.use(express.bodyParser());
 
 //global variables
 var loggedIn = false,
-    password = 'test';
+    password = 'webrtcHacks';
 
 //Temporary home page
 app.get('/', function (req, res) {
